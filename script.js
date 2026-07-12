@@ -1,8 +1,10 @@
 let stuff = 0
-const stuffthing = document.getElementById("stuff")
+let clickValue = 1;
+const stuffthing = document.getElementById("stuffamt")
+const stuffbutton = document.getElementById("stuff");
 function updatestuff() {
 		stuffthing.textContent = `stuff: ${stuff}`;
 }
-clickButton.addEventListener("click", (event) => {
-	score += clickValue;
-	updateScore();
+stuffbutton.addEventListener("click", (event) => {
+	stuff += clickValue;
+	updatestuff();
