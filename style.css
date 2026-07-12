@@ -3,8 +3,6 @@ body {
 	background-color: #ffffff;
 	color:black;
 	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: block;
 	height: 100vh;
 }
