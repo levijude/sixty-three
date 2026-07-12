@@ -4,7 +4,7 @@ let stuffbetterers = 0;
 let sbcost = 50;
 let sbmult = 1;
 let sbmultinc = 0.25;
-let clickValue = 1 * sbmult;
+let clickValue = 1;
 const stuffthing = document.getElementById("stuffamt");
 const sbthing = document.getElementById("sb");
 const stuffbutton = document.getElementById("stuff");
@@ -16,7 +16,7 @@ function updatesb() {
 		sbthing.textContent = `Stuff Betterers: ${stuffbetterers} multiplying stuff gain by x${sbmult}`;
 }
 stuffbutton.addEventListener("click", (event) => {
-	stuff += clickValue;
+	stuff += clickValue * sbmult;
 	updatestuff();
 }) 
 sbbutton.addEventListener("click", (event) => {
@@ -26,6 +26,7 @@ sbbutton.addEventListener("click", (event) => {
 		sbcost *= 1.333;
 		sbmult += sbmultinc;
 		sbbutton.textContent = `purchase a Stuff Betterer for ${sbcost} stuff`;
+		updatestuff();
 		updatesb();
 	}
 }) 
