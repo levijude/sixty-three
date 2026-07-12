@@ -8,3 +8,4 @@ function updatestuff() {
 stuffbutton.addEventListener("click", (event) => {
 	stuff += clickValue;
 	updatestuff();
+}
